@@ -1,0 +1,11 @@
+# https://airportcodes.aero/
+'DFW', 'Dallas-Fort Worth International Airport', 'Dallas','US', 'AMERICAS'
+'DEN', 'Denver International Airpor', 'Denver', 'US', 'AMERICAS'
+'PEK', 'Beijing Capital International Airport', 'Beijing', 'CH'
+'PKX', 'Beijing Daxing International Airport', 'Beijing', 'CH'
+'LHR', 'London Heathrow Airport', 'London', 'UK', 'EUROPE'
+'HND', 'Tokyo International Airport', 'Tokyo', 'JP'
+'ORD', 'Chicago O'Hare International Airport', 'Chicago', 'US'
+'LAX', 'Los Angeles International Airport', 'Los Angeles', 'US', 'AMERICAS'
+'CDG', 'Charles de Gaulle International Airport', 'Paris', 'FR', 'EUROPE'
+'MAD', 'Madrid–Barajas Airport', 'Madrid', 'ES'

@@ -1,0 +1,12 @@
+# Data generated with 'data_generator_flights.py'
+
+('KX434155', '2025-05-07 03:34:35', '2025-05-07 09:09:35', 'Redirected', 'Swiss International Air Lines', 'ORD', 'NT526887')
+('UE827061', '2025-06-19 18:15:08', '2025-06-19 20:43:04', 'Cancelled', 'Cathay Pacific Airways', 'PKX', 'DU424209')
+('QV483124', '2025-07-29 16:48:56', '2025-07-30 04:05:30', 'Active', 'Qatar Airways', 'HND', 'TQ234233')
+('WZ675984', '2025-05-22 03:16:51', '2025-05-22 11:36:37', 'Active', 'Qatar Airways', 'DEN', 'JA056521')
+('CF714009', '2025-09-21 03:47:44', '2025-09-21 06:30:59', 'Cancelled', 'Qantas Airways', 'PKX', 'AP024941')
+('PP166907', '2025-08-29 00:37:20', '2025-08-29 11:12:00', 'Diverted', 'Swiss International Air Lines', 'LHR', 'AR637412')
+('ZB742741', '2025-06-19 19:55:05', '2025-06-19 23:30:32', 'Cancelled', 'Air France', 'HND', 'JA056521')
+('PS759346', '2025-05-22 04:04:28', '2025-05-22 09:35:47', 'Cancelled', 'Emirates', 'HND', 'DC505617')
+('JB199294', '2025-07-04 00:07:59', '2025-07-04 09:32:14', 'Unknown', 'Qantas Airways', 'HND', 'JA056521')
+('ZL194473', '2025-07-21 10:01:48', '2025-07-21 11:58:21', 'Cancelled', 'All Nippon Airways', 'CDG', 'DU424209')
