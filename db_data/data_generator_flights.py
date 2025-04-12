@@ -83,39 +83,35 @@ def generate_airlines(n):
         returns:
         list: list of generated airline names
     """
-    airlines = []
+    airlines_codes = []
     for i in range(n):
-        airlines.append(random.choice(["Qatar Airways",
-                                        "Singapore Airways",
-                                        "All Nippon Airways",
-                                        "Emirates",
-                                        "Japan Airlines",
-                                        "Cathay Pacific Airways" ,
-                                        "EVA Air",
-                                        "Qantas Airways",
-                                        "Air France",
-                                        "Swiss International Air Lines"]))
-    return airlines
-def generate_airports(n):
+        airlines_codes.append(random.choice(["QR", "SQ", "NH", "EK", "JL", "CX", "BR", "QF", "AF", "LX"]))
+    return airlines_codes
+
+
+def generate_airports(n, airport_list=None):
     """ 
-    Generates a list of airport codes
-        args:
-        int n - number of generated records
-        returns:
-        list: list of generated airport codes
+    Generates a list of airport codes.
+
+    Args:
+        n (int): Number of generated records.
+        airport_list (list, optional): List of existing airport codes.
+
+    Returns:
+        list: List of generated airport codes.
     """
+    all_airports = ['DFW', 'DEN', 'PEK', 'PKX', 'LHR', 'HND', 'ORD', 'LAX', 'CDG', 'MAD']
     airports = []
-    for i in range(n):
-       airports.append(random.choice(['DFW', 
-                                        'DEN',
-                                        'PEK',
-                                        'PKX',
-                                        'LHR',
-                                        'HND', 
-                                        'ORD', 
-                                        'LAX', 
-                                        'CDG', 
-                                        'MAD']))
+
+    if airport_list:
+        for i in range(n):
+            current = airport_list[i % len(airport_list)]  # avoid index out of range
+            choices = [a for a in all_airports if a != current]
+            airports.append(random.choice(choices))
+    else:
+        for _ in range(n):
+            airports.append(random.choice(all_airports))
+
     return airports
 def generate_pilots(n):
     """ 
@@ -139,9 +135,10 @@ arrivals = generate_arrivals(dates)
 flight_numbs = generate_flight_number(10)
 status = generate_status(10)
 airlines = generate_airlines(10)
-airports = generate_airports(10)
+airports1 = generate_airports(10)
+airports2 = generate_airports(10,airports1 )
 pilots = generate_pilots(10)
 
-data = zip(flight_numbs,dates, arrivals, status,airlines, airports, pilots)
+data = zip(flight_numbs,dates, arrivals, status,airlines, airports1, airports2,pilots)
 for i in data:
     print(i)
