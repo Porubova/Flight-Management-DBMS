@@ -11,7 +11,6 @@ def create_db():
     sql = open("queries/create_table.sql", "r").read()
 
     for query in sql.split(";"):
-        # print(query)
         conn.execute(query)
     conn.commit()
 

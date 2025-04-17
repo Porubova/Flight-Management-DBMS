@@ -1,9 +1,9 @@
-import sqlite3
-import pandas as pd
 import sys
+import subprocess
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "tabulate"])
+
 from tabulate import tabulate
-from datetime import datetime, timedelta
-import random
 from utils.utils import *
 from db_creation import create_db
 from flights_class import Flights

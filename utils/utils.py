@@ -28,7 +28,7 @@ def print_menu():
         {COLOR_PURPLE}3.{COLOR_END} Add new flight
         {COLOR_PURPLE}4.{COLOR_END} View flights and filter 
         {COLOR_PURPLE}5.{COLOR_END} Update flight details
-        {COLOR_PURPLE}5.{COLOR_END} View pilot list
+        {COLOR_PURPLE}6.{COLOR_END} View pilot list
         {COLOR_PURPLE}7.{COLOR_END} View detailed pilot information and schedule
         {COLOR_PURPLE}8.{COLOR_END} Assign pilot to flight
         {COLOR_LIGHT_RED}0.{COLOR_END} Exit

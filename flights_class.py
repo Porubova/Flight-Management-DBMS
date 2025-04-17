@@ -23,14 +23,14 @@ class Flights:
         flight_number = str.upper(input(f"{COLOR_YELLOW}Please provide flight number (AB123456): "))
 
         while not is_valid_format(flight_number):
-            print(f"{COLOR_RED}Invalid flight number format, try agin.")
+            print(f"{COLOR_RED}Invalid flight number format, try again.")
             flight_number = str.upper(input(f"{COLOR_YELLOW}Please provide flight number (AB123456): "))
 
         # User input for departure time
         departure_time = input(f"{COLOR_YELLOW}Please provide Departure Time (YYYY-MM-DD HH:MM:SS): ").strip()
 
         while not is_valid_datetime(departure_time):
-            print(f"{COLOR_RED}Invalid date format, try agin.")
+            print(f"{COLOR_RED}Invalid date format, try again.")
             departure_time = input(f"{COLOR_YELLOW}Enter new departure time (YYYY-MM-DD HH:MM:SS): ").strip()
         departure_time = datetime.strptime(departure_time, frmt)
         departure_time_str = departure_time.strftime(frmt)
@@ -56,7 +56,7 @@ class Flights:
         airline_code = str.upper(
             input(f"{COLOR_YELLOW}Please provide Airline Code from list {str(available_airlines)}:")).strip()
         while airline_code not in available_airlines:
-            print(f"{COLOR_RED}Invalid airline code, try agin.")
+            print(f"{COLOR_RED}Invalid airline code, try again.")
             airline_code = str.upper(
                 input(
                     f"{COLOR_YELLOW}Please provide Airline Code from list {str(available_airlines)}:")).strip()
@@ -67,7 +67,7 @@ class Flights:
         origin_airport_code = str.upper(
             input(f"{COLOR_YELLOW}Please provide Originated Airport Code from list {str(available_airports)}:")).strip()
         while origin_airport_code not in available_airports:
-            print(f"{COLOR_RED}Invalid airport code, try agin.")
+            print(f"{COLOR_RED}Invalid airport code, try again.")
             origin_airport_code = str.upper(
                 input(
                     f"{COLOR_YELLOW}Please provide Originated Airport Code from list {str(available_airports)}:")).strip()
@@ -79,7 +79,7 @@ class Flights:
                 input(
                     f"{COLOR_YELLOW}Please provide Originated Airport Code from list {str(available_airports)}:")).strip()
         while destination_airport_code  not in available_airports:
-            print(f"{COLOR_RED}Invalid airport code, try agin.")
+            print(f"{COLOR_RED}Invalid airport code, try again.")
             destination_airport_code = str.upper(
                 input(
                     f"{COLOR_YELLOW}Please provide Originated Airport Code from list {str(available_airports)}:")).strip()
@@ -95,7 +95,7 @@ class Flights:
                                       airline_code, origin_airport_code, destination_airport_code, pilot_id)
                                       VALUES(?, ?, ?, ?, ?, ?, ?, ?)"""
         self.cursor.execute(query, (flight_number, departure_time_str, arrival_time_str, status,
-                                      airline_code, origin_airport_code, destination_airport_code, pilot_id,)).fetchall()
+                                      airline_code, origin_airport_code, destination_airport_code, pilot_id,))
         self.conn.commit()
 
         # Display all flights
@@ -533,7 +533,7 @@ class Flights:
             new_time = input(f"{COLOR_YELLOW}Enter new departure time (YYYY-MM-DD HH:MM:SS): ").strip()
 
             while not is_valid_datetime(new_time):
-                print(f"{COLOR_RED}Invalid date format, try agin.")
+                print(f"{COLOR_RED}Invalid date format, try again.")
                 new_time = input(f"{COLOR_YELLOW}Enter new departure time (YYYY-MM-DD HH:MM:SS): ").strip()
             new_time_str = datetime.strptime(new_time, frmt).strftime(frmt)
 
@@ -575,7 +575,7 @@ class Flights:
             new_time = input(f"{COLOR_YELLOW}Enter new departure time (YYYY-MM-DD HH:MM:SS): ").strip()
 
             while not is_valid_datetime(new_time):
-                print(f"{COLOR_RED}Invalid date format, try agin.")
+                print(f"{COLOR_RED}Invalid date format, try again.")
                 new_time = input(f"{COLOR_YELLOW}Enter new departure time (YYYY-MM-DD HH:MM:SS): ").strip()
             new_time_str = datetime.strptime(new_time, frmt).strftime(frmt)
 
